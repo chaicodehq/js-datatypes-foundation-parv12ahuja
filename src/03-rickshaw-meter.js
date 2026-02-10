@@ -52,13 +52,28 @@
  */
 export function parseFare(fareString) {
   // Your code here
+  if(typeof fareString !== "string" ){return -1}
+  let amount = parseFloat(fareString)
+  if(Number.isNaN(amount)){
+    return -1
+  }
+  return parseFloat(fareString)
 }
 
 export function roundFare(amount, decimalPlaces) {
   // Your code here
+  if(typeof amount !== "number" || typeof decimalPlaces !== "number" || decimalPlaces < 0 || !Number.isInteger(decimalPlaces) || Number.isNaN(amount)){return ""}
+ 
+  return amount.toFixed(decimalPlaces)
+
 }
 
 export function calculateSurge(baseFare, surgeMultiplier) {
+  if(typeof baseFare !== "number" || Number.isNaN(baseFare) || typeof surgeMultiplier !== "number" || Number.isNaN(surgeMultiplier) || baseFare < 0 || surgeMultiplier <0 ){
+    return 0;
+  }
+  let total = baseFare*surgeMultiplier
+  return Math.ceil(total)
   // Your code here
 }
 
