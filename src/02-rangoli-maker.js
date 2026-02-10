@@ -64,17 +64,27 @@ export function extractRangoliCenter(design, start, end) {
 
 
 export function splitAndJoinRangoli(colorString, oldSep, newSep) {
-  // Your code here
-  if(typeof colorString !== "string" || typeof oldSep !== "string" || typeof newSep !== "string"){
-    return ""
-  }
-  return colorString.replaceAll(oldSep,newSep)
+if(typeof colorString !== "string"){return ""}
+return colorString.split(oldSep).join(newSep)
+
 }
 
 export function replaceRangoliColor(design, oldColor, newColor) {
   // Your code here
+  if(typeof design !== "string" || typeof oldColor !== "string" || typeof newColor !== "string"){
+    return ""
+  }
+  return colorString.replaceAll(oldColor,newColor)
+
+  
+  // Your code here
 }
 
 export function makeRangoliBorder(char, length) {
+  if(typeof char !== "string" || length <=0 || typeof length !== "number" ){
+    return ""
+  }
+  return char.repeat(length).slice(0,length)
+
   // Your code here
 }
