@@ -2,7 +2,7 @@
  * 🎨 Rangoli Border Maker - String Transform
  *
  * Diwali aa rahi hai! Priya digital rangoli designs bana rahi hai terminal pe.
- * String transform methods use karke patterns banana hai.
+ * Stng transform methods use karke patterns banana hai.
  * Tu Priya ki madad kar!
  *
  * Methods to explore: .slice(), .split(), .join(), .replace(),
@@ -46,6 +46,7 @@
  *   splitAndJoinRangoli("red,blue", ",", "-")  // => "red-blue"
  */
 export function repeatPattern(pattern, times) {
+
   // Your code here
 }
 

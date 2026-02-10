@@ -46,19 +46,42 @@
  *   hasSpecialIngredient("Elaichi Chai", "elaichi")  // => true
  */
 export function getChaiOrderLength(order) {
+  
+  if(typeof(order) !== "string"){ return -1}
+  return order.trim().length()
   // Your code here
 }
 
 export function shoutChaiOrder(order) {
+  if(typeof(order) !== "string" ){
+    return ""
+  }
+  if(order.trim() == ""){
+    return ""
+  }
+  return order.trim().toUpperCase()
   // Your code here
 }
 
 export function whisperChaiOrder(order) {
+  if(typeof(order) !== "string"){
+    return ""
+  }
+  let trimmed = order.trim()
+  if(trimmed == ""){
+    return ""
+  }
+  return trimmed.toLowerCase()
   // Your code here
 }
 
 export function hasSpecialIngredient(order, ingredient) {
-  // Your code here
+  if( typeof ingredient !== "string"  || typeof(order) !== "string"){
+    return false
+  }
+  let order_1 = order.toLowerCase()
+  let ingredient1 = ingredient.toLocaleLowerCase()
+  return order_1.includes(ingredient1)
 }
 
 export function getFirstAndLastChar(order) {
