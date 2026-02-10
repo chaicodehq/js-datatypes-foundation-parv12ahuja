@@ -86,4 +86,11 @@ export function hasSpecialIngredient(order, ingredient) {
 
 export function getFirstAndLastChar(order) {
   // Your code here
+  if(typeof order !== "string" || order === ""){
+    return null
+  }
+return{
+  first: order.trim().charAt(0),
+  last: order.trim().at(-1)
+}
 }
