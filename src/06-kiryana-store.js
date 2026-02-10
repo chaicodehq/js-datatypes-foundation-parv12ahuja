@@ -52,6 +52,7 @@
  */
 export function getItemNames(items) {
   // Your code here
+  
 }
 
 export function getAffordableItems(items, maxPrice) {
