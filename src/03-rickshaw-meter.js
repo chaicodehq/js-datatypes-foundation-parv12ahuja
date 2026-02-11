@@ -78,9 +78,22 @@ export function calculateSurge(baseFare, surgeMultiplier) {
 }
 
 export function findCheapestAndCostliest(...fares) {
+
   // Your code here
 }
 
 export function getDistanceDifference(from, to) {
+  if(typeof from !== "string" || typeof to !== "string" ){
+    return ""
+  }
+
+  let from_1 = parseInt(from)
+  let to_1 = parseInt(to)
+  if(Number.isNaN(from_1) || Number.isNaN(to_1)){
+    return -1 
+    
+  }
+  let difference = to_1 - from_1
+  return  Math.abs(difference)
   // Your code here
 }
